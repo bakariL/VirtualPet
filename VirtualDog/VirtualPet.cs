@@ -19,7 +19,6 @@ namespace VirtualDog
         {
             get { return this.name; }
             set { this.name = value; }
-
         }
 
         public int Energy
@@ -97,30 +96,19 @@ namespace VirtualDog
                 return "Im getting tired of playing.";
             }
         }
-        public void Eat(int energy)
-        {
-            energy += energy;
-        }
+        //public void Eat(int energy)
+        //{
+        //    energy += energy;
+        //}
 
-        public string CheckEnergy()
-        {
-            if (energy >= 80)
-            {
-                return "fully Energized";
-            }
-            else if (energy > 40)
-            {
-                return "getting Hungry";
-            }
-            else
-            {
-                return "STARVING!";
-            }
-        }
+   
 
-        public void Tick(int hungar)
+        public int Tick()
         {
-            hungar += hungar;
+            return energy = energy - 35;
+            
+
+
         }
     }
     }
