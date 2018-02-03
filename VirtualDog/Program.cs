@@ -12,7 +12,6 @@ namespace VirtualDog
         {
             //
             VirtualPet userPet = new VirtualPet();
-            Tick userTick = new Tick();
             int userChoice;
 
 
@@ -40,20 +39,22 @@ namespace VirtualDog
                         Console.WriteLine(userPet.Name);
                         break;
                     case 2:
-                        Console.WriteLine("Hungar: "+ userPet.IsHungry);
+                        Random randomNumber = new Random();
+                        int[] rNumbers = new int[1];
+                        Console.WriteLine("Hungar: "+ userPet.Feed(rNumbers[0]));
                         break;
                     case 3:
-                        Console.WriteLine("Energy: " + userPet.IsHungry);
+                        Console.WriteLine("Energy: " + userPet.Energy);
                         break;
                     case 4:
                         Console.WriteLine(userPet.Play());
                         break;
                     case 5:
                         Console.WriteLine(userPet.Name);
-                        Console.WriteLine("Health: " + userPet.IsHungry);
-                        Console.WriteLine("Energy: "+ userPet.Energy);
-                        Console.WriteLine("Bored? "+ userPet.Play());
-                        break;
+                        Console.WriteLine("Health: " + userPet.Energy);
+                        Console.WriteLine("Hungar: " + userPet.Hungar);
+                        Console.WriteLine("Bordem: " + userPet.Isbord);
+                            break;
                     
                 }
             }                
@@ -61,6 +62,6 @@ namespace VirtualDog
 
         }
 
-
+        
     }
 }

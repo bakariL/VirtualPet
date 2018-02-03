@@ -27,7 +27,7 @@ namespace VirtualDog
             set { this.energy = value; }
         }
 
-        public int IsHungry
+        public int Hungar
         {
             get { return this.hungar; }
             set { this.hungar = value; }
@@ -52,16 +52,16 @@ namespace VirtualDog
             this.Energy = energy;
         }
 
-        public VirtualPet(string name, int energy, int isHungry)
+        public VirtualPet(string name, int energy, int hungar)
         {
             this.name = name;
             this.Energy = energy;
-            this.hungar = isHungry;
+            this.hungar = hungar;
         }
-        public VirtualPet(string name, int energy, int isHealthy, bool isBord)
+        public VirtualPet(string name, int energy, int hungar, bool isBord)
         {
             this.name = name;
-            this.hungar = IsHungry;
+            this.hungar = hungar;
             this.isBord = isBord;
             this.energy = energy;
         }
@@ -73,7 +73,7 @@ namespace VirtualDog
             this.name = "BoBo";
         }
 
-        public void GetSleep(int isTired)
+        public void GetSleep()
         {
 
             energy += (energy - 25);
@@ -96,20 +96,18 @@ namespace VirtualDog
                 return "Im getting tired of playing.";
             }
         }
-        //public void Eat(int energy)
-        //{
-        //    energy += energy;
-        //}
-
-   
-
-        public int Tick()
+        public void Eat()
         {
-            return energy = energy - 35;
-            
-
-
+            if(energy < 50)
+            {
+                Console.WriteLine("I am getting tired.");
+                energy += energy;
+            }
+            else
+            {
+                Console.WriteLine("i am well rested");
+            }
         }
     }
-    }
+ }
 
