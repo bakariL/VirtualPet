@@ -12,17 +12,16 @@ namespace VirtualDog
         {
             //
             VirtualPet userPet = new VirtualPet();
-            int userChoice;
-
-
+            VirtualPet tick = new VirtualPet();
            
-                Console.WriteLine("Hello, welcome to Virtual Pet.");
+
+
+            int userChoice;
+            Console.WriteLine("Hello, welcome to Virtual Pet.");
             do
             {
                 
                 Console.WriteLine("What would you like to do with your pet?");
-
-                
                 Console.WriteLine("To see the name of pet, Type 1");
                 Console.WriteLine("To feed the pet, Type 2");
                 Console.WriteLine("To put the pet to bed, Type 3");
@@ -41,13 +40,17 @@ namespace VirtualDog
                     case 2:
                         Random randomNumber = new Random();
                         int[] rNumbers = new int[1];
+                        int f = rNumbers[0];
+                        userPet.Feed(f);
                         Console.WriteLine("Hungar: "+ userPet.Feed(rNumbers[0]));
                         break;
                     case 3:
+                        userPet.GetSleep();
                         Console.WriteLine("Energy: " + userPet.Energy);
                         break;
                     case 4:
-                        Console.WriteLine(userPet.Play());
+                        userPet.Play();
+                        Console.WriteLine(userPet.Isbord);
                         break;
                     case 5:
                         Console.WriteLine(userPet.Name);

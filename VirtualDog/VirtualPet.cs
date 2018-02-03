@@ -108,6 +108,18 @@ namespace VirtualDog
                 Console.WriteLine("i am well rested");
             }
         }
+        public void Tick()
+        {
+            if (isBord)
+            {
+                energy -= energy;
+            }
+            else
+            {
+                hungar -= hungar;
+            }
+                            }
+
     }
  }
 
