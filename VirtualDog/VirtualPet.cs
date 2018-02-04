@@ -44,7 +44,7 @@ namespace VirtualDog
         //Contructors at least 1
         public VirtualPet()
         {
-            this.name = "BoBo the Bear";//maybe put something better here....
+            this.name = "Hi my name is BoBo The Bear!";//maybe put something better here....
         }
 
         public VirtualPet(int energy)
@@ -58,6 +58,7 @@ namespace VirtualDog
             this.Energy = energy;
             this.hungar = hungar;
         }
+
         public VirtualPet(string name, int energy, int hungar, bool isBord)
         {
             this.name = name;
@@ -81,46 +82,35 @@ namespace VirtualDog
 
         public void GetSleep()
         {
-
-            energy += (energy - 25);
+            energy +=  25;
             Console.WriteLine("Engergy:" + energy);
         }
 
-        public int Feed(int hungar)
+        public void Feed()
         {
-            return hungar += hungar;
+             hungar += 20;
+            Console.WriteLine("Hungar:" + hungar  );
         }
-        public string Play()
+
+        public void Play()
         {
             if (isBord)
             {
-                return "Play with me!";
+                Console.WriteLine("Play with me");
+                energy -= 35;
 
             }
             else
             {
-                return "Im getting tired of playing.";
-            }
-        }
-        public void Eat()
-        {
-            if(energy < 50)
-            {
-                Console.WriteLine("I am getting tired.");
-                energy += energy;
-            }
-            else
-            {
-                Console.WriteLine("i am well rested");
+                Console.WriteLine("Im getting tired of playing."); 
             }
         }
 
-        private Random random = new Random();
         public void Tick()
         {
             if (isBord)
             {
-              energy = random.Next(hungar) + 1;
+              energy += 1;
             }
             else
             {

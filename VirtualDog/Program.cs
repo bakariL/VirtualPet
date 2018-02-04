@@ -32,41 +32,35 @@ namespace VirtualDog
                 Console.WriteLine("To quit, type 7");
 
                 userPet.Tick();
-                
                 userChoice = int.Parse(Console.ReadLine());
             
                 switch (userChoice)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine(userPet.Name);
                         break;
                     case 2:
                         Console.Clear();
-                        Random randomNumber = new Random();
-                        int[] rNumbers = new int[1];
-                        int f = rNumbers[0];
-                        userPet.Feed(f);
-                        Console.WriteLine("Hungar: "+ userPet.Feed(rNumbers[0]));
+                        userPet.Feed();
+                    //    Console.WriteLine("Hungar: "+ userPet.Hungar);
                         break;
                     case 3:
                         Console.Clear();
-
                         userPet.GetSleep();
-                        Console.WriteLine("Energy: " + userPet.Energy);
+                      //  Console.WriteLine("Energy: " + userPet.Energy);
                         break;
                     case 4:
                         Console.Clear();
-
                         userPet.Play();
-                        Console.WriteLine(userPet.Isbord);
+                      //  Console.WriteLine(userPet.Isbord);
                         break;
                     case 5:
                         Console.Clear();
-
                         Console.WriteLine(userPet.Name);
                         Console.WriteLine("Health: " + userPet.Energy);
                         Console.WriteLine("Hungar: " + userPet.Hungar);
-                        Console.WriteLine("Bordem: " + userPet.Isbord);
+                        Console.WriteLine("Bordem: " + userPet);
                             break;
                     
                 }
