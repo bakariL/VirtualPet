@@ -68,6 +68,12 @@ namespace VirtualDog
 
 
         //Methods 3
+
+            public static void Clear()
+        {
+
+        }
+
         public void GetName(string name)
         {
             this.name = "BoBo";
@@ -108,17 +114,19 @@ namespace VirtualDog
                 Console.WriteLine("i am well rested");
             }
         }
+
+        private Random random = new Random();
         public void Tick()
         {
             if (isBord)
             {
-                energy -= energy;
+              energy = random.Next(hungar) + 1;
             }
             else
             {
                 hungar -= hungar;
             }
-                            }
+        }
 
     }
  }

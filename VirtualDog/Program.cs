@@ -18,6 +18,7 @@ namespace VirtualDog
 
             int userChoice;
             Console.WriteLine("Hello, welcome to Virtual Pet.");
+
             do
             {
                 
@@ -30,6 +31,8 @@ namespace VirtualDog
                 Console.WriteLine("To restart, type 6");
                 Console.WriteLine("To quit, type 7");
 
+                userPet.Tick();
+                
                 userChoice = int.Parse(Console.ReadLine());
             
                 switch (userChoice)
@@ -38,6 +41,7 @@ namespace VirtualDog
                         Console.WriteLine(userPet.Name);
                         break;
                     case 2:
+                        Console.Clear();
                         Random randomNumber = new Random();
                         int[] rNumbers = new int[1];
                         int f = rNumbers[0];
@@ -45,14 +49,20 @@ namespace VirtualDog
                         Console.WriteLine("Hungar: "+ userPet.Feed(rNumbers[0]));
                         break;
                     case 3:
+                        Console.Clear();
+
                         userPet.GetSleep();
                         Console.WriteLine("Energy: " + userPet.Energy);
                         break;
                     case 4:
+                        Console.Clear();
+
                         userPet.Play();
                         Console.WriteLine(userPet.Isbord);
                         break;
                     case 5:
+                        Console.Clear();
+
                         Console.WriteLine(userPet.Name);
                         Console.WriteLine("Health: " + userPet.Energy);
                         Console.WriteLine("Hungar: " + userPet.Hungar);
