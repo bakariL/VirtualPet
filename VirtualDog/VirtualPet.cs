@@ -82,7 +82,7 @@ namespace VirtualDog
 
         public void GetSleep()
         {
-            energy +=  25;
+            energy +=  35;
             Console.WriteLine("Engergy:" + energy);
         }
 
@@ -97,6 +97,9 @@ namespace VirtualDog
             if (isBord)
             {
                 Console.WriteLine("Play with me");
+                energy -= 65;
+                hungar -= 42;
+
             }
             else
             {
@@ -108,7 +111,7 @@ namespace VirtualDog
         {
             if (isBord)
             {
-              energy += 1;
+              energy -= 12;
             }
             else
             {

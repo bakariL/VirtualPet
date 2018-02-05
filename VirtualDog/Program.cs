@@ -43,15 +43,18 @@ namespace VirtualDog
                     case 2:
                         Console.Clear();
                         userPet.Feed();
+                        Console.WriteLine("Your pet is hungry!");
                     //    Console.WriteLine("Hungar: "+ userPet.Hungar);
                         break;
                     case 3:
                         Console.Clear();
                         userPet.GetSleep();
+                        Console.WriteLine("Your pet needs some rest");
                       //  Console.WriteLine("Energy: " + userPet.Energy);
                         break;
                     case 4:
                         Console.Clear();
+                        Console.WriteLine("Im bored");
                         userPet.Play();
                       //  Console.WriteLine(userPet.Isbord);
                         break;
