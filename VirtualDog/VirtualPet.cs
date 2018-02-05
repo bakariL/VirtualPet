@@ -97,8 +97,6 @@ namespace VirtualDog
             if (isBord)
             {
                 Console.WriteLine("Play with me");
-                energy -= 35;
-
             }
             else
             {

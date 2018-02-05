@@ -60,7 +60,7 @@ namespace VirtualDog
                         Console.WriteLine(userPet.Name);
                         Console.WriteLine("Health: " + userPet.Energy);
                         Console.WriteLine("Hungar: " + userPet.Hungar);
-                        Console.WriteLine("Bordem: " + userPet);
+                        Console.WriteLine("Bordem: " + userPet.Isbord);
                             break;
                     
                 }
